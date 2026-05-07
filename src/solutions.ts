@@ -54,6 +54,7 @@ interface Book {
 function toggleReadStatus(book: Book): Book & { isRead: boolean } {
   return { ...book, isRead: true };
 }
+
 const myBook: Book = {
   title: "TypeScript Guide",
   author: "Jane Doe",
