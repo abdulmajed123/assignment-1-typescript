@@ -3,8 +3,8 @@ function filterEvenNumbers(numbers: number[]): number[] {
   return numbers.filter((num) => num % 2 === 0);
 }
 
-const result = filterEvenNumbers([1, 2, 3, 4, 5, 6]);
-console.log(result);
+const result1 = filterEvenNumbers([1, 2, 3, 4, 5, 6]);
+console.log(result1);
 
 // Problem No : 2
 function reverseString(text: string): string {
@@ -16,7 +16,7 @@ console.log(text);
 
 // Problem No : 3
 
-type StringOrNumber = "string" | "number";
+type StringOrNumber = string | number;
 function checkType(value: StringOrNumber): string {
   if (typeof value === "string") {
     return "String";
@@ -27,3 +27,18 @@ function checkType(value: StringOrNumber): string {
 
 const value = checkType(12);
 console.log(value);
+
+// Problem No: 4
+
+type User = {
+  id: number;
+  name: string;
+  age: number;
+};
+
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+const user: User = { id: 1, name: "John Doe", age: 21 };
+const result = getProperty(user, "name");
+console.log(result);
