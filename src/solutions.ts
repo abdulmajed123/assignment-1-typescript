@@ -4,7 +4,6 @@ function filterEvenNumbers(numbers: number[]): number[] {
 }
 
 const result1 = filterEvenNumbers([1, 2, 3, 4, 5, 6]);
-console.log(result1);
 
 // Problem No : 2
 function reverseString(text: string): string {
@@ -12,7 +11,6 @@ function reverseString(text: string): string {
 }
 
 const text = reverseString("typescript");
-console.log(text);
 
 // Problem No : 3
 
@@ -26,7 +24,6 @@ function checkType(value: StringOrNumber): string {
 }
 
 const value = checkType(12);
-console.log(value);
 
 // Problem No: 4
 
@@ -41,7 +38,6 @@ function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 }
 const user: User = { id: 1, name: "John Doe", age: 21 };
 const result = getProperty(user, "name");
-console.log(result);
 
 // Problem No: 5
 
@@ -62,7 +58,6 @@ const myBook: Book = {
 };
 
 const result3 = toggleReadStatus(myBook);
-console.log(result3);
 
 // Problem No: 6
 
@@ -90,7 +85,6 @@ class Student extends Person {
 
 const student = new Student("Alice", 20, "A");
 const output = student.getDetails();
-console.log(output);
 
 // Problem No: 7
 
@@ -99,4 +93,3 @@ function getIntersection(arr1: number[], arr2: number[]): number[] {
 }
 
 const result4 = getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
-console.log(result4);
